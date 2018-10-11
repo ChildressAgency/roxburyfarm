@@ -304,6 +304,101 @@ a{
   opacity:1;
 }
 
+#service-section{
+  background-image:url(images/dirt-shovel.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center top;
+  height:auto;
+  padding-bottom:400px;
+  padding-top:80px;
+}
+.service-card{
+  max-width:205px;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+  text-align:center;
+  overflow:hidden;
+  margin-top:25px;
+}
+.service-card-overlay{
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  background-color:#89b47e;
+  opacity:.5;
+  transition:all .3s ease;
+  z-index:1;
+}
+.service-card>h3{
+  position:absolute;
+  z-index:3;
+  font-family:Roboto, sans-serif;
+  font-size:19px;
+  text-transform:uppercase;
+  color:#fff;
+  font-weight:700;
+  letter-spacing:2px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  width:100%;
+  margin-top:0;
+  margin-bottom:0;
+  padding:15px;
+}
+.service-card-content{
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:100%;
+  left:0;
+  color:#fff;
+  background-color:#89b47e;
+  transition:all .3s ease;
+  z-index:5;
+}
+.service-card-content>h3{
+  font-family:Roboto, sans-serif;
+  font-size:19px;
+  font-weight:700;
+  letter-spacing:2px;
+  margin-top:0;
+  margin-bottom:0;
+  text-transform:uppercase;
+  padding:25px 15px 10px;
+}
+.service-card-content .service-card-caption{
+  padding:0 15px;
+  height:160px;
+  overflow:hidden;
+}
+.service-card-content .service-card-caption>p{
+  border-top:1px solid #fff;
+  font-size:16px;
+  padding-top:5px;
+}
+.service-card-content .btn-main{
+  margin-top:15px;
+  position:absolute;
+  left:8px;
+  bottom:8px;
+}
+.service-card-content .btn-main.btn-white{
+  color:#008202;
+}
+.service-card-content .btn-main.btn-white:hover,
+.service-card-content .btn-main.btn-white:focus{
+  background-color:#a64d35;
+  color:#fff;
+}
+.service-card:hover .service-card-content{
+  top:0;
+}
+
 
 @media (max-width:767px){
   .hero-caption h1{
