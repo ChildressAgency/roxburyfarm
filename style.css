@@ -399,6 +399,32 @@ a{
   top:0;
 }
 
+.video-section{
+  margin-top:100px;
+}
+.video-section h2,
+#social-feed h2{
+  font-size:50px;
+  color:#89b47e;
+  font-weight:700;
+  font-style:italic;
+  text-transform:uppercase;
+  letter-spacing:4px;
+}
+.video-section p{
+  font-family:Taviraj, serif;
+  font-size:26px;
+  font-weight:500;
+  color:#664f3e;
+}
+#social-feed{
+  background-image:url(images/bottom-dirt.jpg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center bottom;
+  padding-bottom:470px;
+}
+
 
 @media (max-width:767px){
   .hero-caption h1{
@@ -406,6 +432,9 @@ a{
   }
   .btns-inline .btn-main{
     margin-left:0 !important;
+  }
+  #social-feed{
+    background-size:cover;
   }
 }
 @media (max-width:991px){
