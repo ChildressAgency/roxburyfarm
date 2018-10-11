@@ -403,13 +403,15 @@ a{
   margin-top:100px;
 }
 .video-section h2,
-#social-feed h2{
+#social-feed h2,
+#blog-tips h2{
   font-size:50px;
   color:#89b47e;
   font-weight:700;
   font-style:italic;
   text-transform:uppercase;
   letter-spacing:4px;
+  margin-top:0;
 }
 .video-section p{
   font-family:Taviraj, serif;
@@ -423,6 +425,51 @@ a{
   background-size:contain;
   background-position:center bottom;
   padding-bottom:470px;
+  padding-top:40px;
+}
+#blog-tips{
+  text-align:center;
+  padding-top:60px;
+  padding-bottom:60px;
+}
+#blog-tips .blog-link{
+  display:block;
+  margin-top:25px;
+  height:285px;
+  max-width:300px;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+}
+#blog-tips .blog-link>h3{
+  position:absolute;
+  padding-left:15px;
+  padding-right:15px;
+  top:50%;
+  left:50%;
+  width:100%;
+  transform:translate(-50%, -50%);
+  color:#fff;
+  text-transform:uppercase;
+  z-index:3;
+  margin-top:0;
+  margin-bottom:0;
+}
+#blog-tips .blog-link-overlay{
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:1;
+  background-color:rgba(0,0,0,.6);
+}
+
+#footer-upper{
+  background-image:url(images/dirt-bg.jpg);
+}
+#footer-lower .embed-responsive-16by9{
+  padding-bottom:420px;
 }
 
 
