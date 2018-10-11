@@ -226,8 +226,9 @@ a{
 
 #hp-carousel{
   background-image:url(images/dirt-bg.jpg);
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-repeat:repeat;
+  background-size:contain;
+  padding-top:70px;
 }
 #hp-carousel .img-side{
   background-repeat:no-repeat;
@@ -247,21 +248,61 @@ a{
   display:table-row;
   height:50%;
 }
-#hp-carousel .text-side>.caption{
-  display:table-row;
-  height:50%;
-  background-color:#fff;
-}
 #hp-carousel .text-side>.title>h2{
   font-size:50px;
   color:#fff;
   letter-spacing:4px;
   text-transform:uppercase;
-  margin-top:125px;
+  padding-top:125px;
   padding-left:15px;
   padding-right:15px;
 }
-
+#hp-carousel .text-side>.caption{
+  display:table-row;
+  height:50%;
+  background-color:#fff;
+  position:relative;
+}
+#hp-carousel .text-side>.caption>*{
+  margin-left:15px;
+  margin-right:15px;
+}
+#hp-carousel .text-side>.caption>.btn-main{
+  position:absolute;
+  bottom:25px;
+}
+#hp-carousel .text-side>.caption>p{
+  margin-top:25px;
+  height:147px;
+  overflow:hidden;
+}
+#hp-carousel .carousel-indicators{
+  bottom:auto;
+  top:110px;
+  left:20px;
+  margin-left:0;
+  width:auto;
+}
+#hp-carousel .carousel-indicators li{
+  border:none;
+  border-radius:0;
+  height:24px;
+  width:24px;
+  background-color:#fff;
+  opacity:.4;
+  transition:all .3s ease;
+  vertical-align:middle;
+  margin:0;
+}
+#hp-carousel .carousel-indicators li+li{
+  margin-left:20px;
+}
+#hp-carousel .carousel-indicators .active{
+  height:24px;
+  width:24px;
+  background-color:#89b47e;
+  opacity:1;
+}
 
 
 @media (max-width:767px){
@@ -339,6 +380,9 @@ a{
   #navbar .dropdown-menu>li>a:hover,
   #navbar .dropdown-menu>li>a:focus{
     color:#000;
+  }
+  #hp-carousel .text-side>.title>h2{
+    font-size:36px;
   }
 }
 
