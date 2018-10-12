@@ -702,6 +702,87 @@ article>header{
   width:66px;
 }
 
+.featured-product{
+  position:relative;
+  text-align:center;
+  margin-top:25px;
+  display:block;
+  max-width:205px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.featured-product h3{
+  position:absolute;
+  z-index:3;
+  color:#fff;
+  text-transform:uppercase;
+  font-family:Roboto, sans-serif;
+  font-weight:700;
+  letter-spacing:2px;
+  font-size:19px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  margin-top:0;
+  margin-bottom:0;
+  width:100%;
+  padding-left:15px;
+  padding-right:15px;
+}
+.featured-product-overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#89b47e;
+  opacity:.5;
+  transition:opacity .3s ease;
+}
+.featured-product:hover .featured-product-overlay{
+  opacity:1;
+}
+#all-products{
+  margin-top:80px;
+}
+#all-products .panel-default{
+  background-color:transparent;
+  border:none;
+  border-radius:0;
+  box-shadow:none;
+  border-top:2px solid #7fbc03;
+}
+#all-products .panel-heading{
+  background-color:transparent;
+  border:none;
+  border-radius:0;
+}
+#all-products .panel-heading a{
+  font-weight:700;
+  font-size:26px;
+  text-transform:uppercase;
+  position:relative;
+  padding-left:25px;
+}
+#all-products .panel-heading a:hover,
+#all-products .panel-heading a:focus{
+  text-decoration:none;
+}
+#all-products .panel-heading a::before{
+  content:"\2013";
+  position:absolute;
+  left:-15px;
+  font-size:50px;
+  font-weight:700;
+  top:-13px;
+}
+#all-products .panel-heading a.collapsed::before{
+  content:"\002b";
+}
+#all-products .panel-body{
+  border-top:none;
+}
+
 
 
 @media (max-width:767px){
