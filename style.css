@@ -783,6 +783,50 @@ article>header{
   border-top:none;
 }
 
+#product-tables{
+  margin-top:40px;
+}
+#product-tables .nav-justified{
+  border-bottom:3px solid #7fbc03;
+}
+#product-tables .nav-justified>li>a{
+  font-size:24px;
+  font-weight:700;
+  text-transform:uppercase;
+  color:#000;
+  background-color:#f2f2f2;
+  transition:all .3s ease;
+  letter-spacing:2px;
+}
+#product-tables .nav-justified>li.active>a,
+#product-tables .nav-justified>li.active>a:hover,
+#product-tables .nav-justified>li.active>a:focus{
+  color:#fff;
+  background-color:#4c412a;
+}
+#product-tables .nav-justified>li + li{
+  border-left:1px solid #c3c3c3;
+}
+#product-tables tbody::after{
+  content:"";
+  display:block;
+  height:40px;
+}
+#product-tables thead>tr>th{
+  padding-top:15px;
+  padding-bottom:25px;
+}
+#product-tables .table>tbody>tr>td,
+#product-tables .table>tbody>tr>th, 
+#product-tables .table>tfoot>tr>td, 
+#product-tables .table>tfoot>tr>th, 
+#product-tables .table>thead>tr>td, 
+#product-tables .table>thead>tr>th{
+  border:none;
+}
+.table>tbody + tbody{
+  border-top:none;
+}
 
 
 @media (max-width:767px){
