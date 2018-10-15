@@ -281,3 +281,13 @@ function roxburyfarm_header_fallback_menu(){ ?>
     <li <?php if(is_page('contact')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('contact'); ?>">Contact</a></li>
   </ul>
 <?php }
+
+function roxburyfarm_footer_fallback_menu(){ ?>
+  <ul class="footer-nav">
+    <li><a href="<?php echo home_url('products'); ?>">Products</a></li>
+    <li><a href="<?php echo home_url('videos'); ?>">How to Videos</a></li>
+    <li><a href="<?php echo home_url('tips'); ?>">Tips</a></li>
+    <li><a href="<?php echo home_url('about'); ?>">About</a></li>
+    <li><a href="<?php echo home_url('contact'); ?>">Contact Us</a></li>
+  </ul>
+<?php }
