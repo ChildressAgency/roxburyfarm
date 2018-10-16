@@ -625,7 +625,7 @@ img.aligncenter{
   margin-top:25px;
 }
 
-article>header{
+header.page-header{
   text-align:center;
   border-bottom:3px solid #7fbc03;
   padding-bottom:15px;

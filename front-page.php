@@ -130,11 +130,16 @@
             <h2><?php the_field('recent_posts_section_title'); ?></h2>
             <div class="row">
               <?php while($recent_posts->have_posts()): $recent_posts->the_post(); ?>
-                <div class="col-sm-4">
-                  <?php $featured_image = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
+                <div class="col-sm-6 col-md-4">
+                  <?php 
+                    $featured_image = get_the_post_thumbnail_url(get_the_ID(), 'full'); 
+                    if(!$featured_image){
+                      $featured_image = get_stylesheet_directory_uri() . '/images/nursery-trees.jpg';
+                    }
+                  ?>
                   <a href="<?php the_permalink(); ?>" class="blog-link" style="background-image:url(<?php echo $featured_image; ?>); background-position:center center;">
-                  <h3><?php the_title(); ?></h3>
-                  <div class="blog-link-overlay"></div>
+                    <h3><?php the_title(); ?></h3>
+                    <div class="blog-link-overlay"></div>
                   </a>
                 </div>
               <?php endwhile; ?>
