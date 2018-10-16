@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-  <main id="main" class="hp-main">
+  <main id="main">
     <div class="container">
       <article>
-        <header>
+        <header class="page-header">
           <h2 class="page-title">Fresh cut tips and blog</h2>
         </header>
 
