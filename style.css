@@ -453,7 +453,7 @@ img.aligncenter{
 #social-feed{
   background-image:url(images/bottom-dirt.jpg);
   background-repeat:no-repeat;
-  background-size:contain;
+  background-size:cover;
   background-position:center bottom;
   padding-bottom:470px;
   padding-top:40px;
@@ -631,14 +631,14 @@ article>header{
   padding-bottom:15px;
   margin-bottom:40px;
 }
-.article-title{
+.page-title{
   font-size:50px;
   color:#89b47e;
   font-style:italic;
   text-transform:uppercase;
   letter-spacing:4px;
 }
-.article-subtitle{
+.page-subtitle{
   font-family:Taviraj, serif;
   font-size:26px;
   font-weight:500;
@@ -853,9 +853,6 @@ article>header{
   }
   .btns-inline .btn-main{
     margin-left:0 !important;
-  }
-  #social-feed{
-    background-size:cover;
   }
   #nav-info{
     padding-left:15px;
