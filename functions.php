@@ -321,17 +321,17 @@ function roxburyfarm_create_post_types(){
     )
   );
   register_post_type('videos', $videos_args);
+}
 
-  register_taxonomy('video_type',
-    'videos',
-    array(
-      'hierarchical' => true,
-      'show_admin_column' => true,
-      'public' => true,
-      'labels' => array(
-        'name' => 'Video Types',
-        'singular_name' => 'Video Type'
-      )
-    )
-      );
+function roxburyfarm_add_video_params($video){
+  preg_match('/src="(.+?)"/', $video, $matches);
+  $video_src = $matches[1];
+  
+  $new_params = array('rel' => 0);
+  $new_src = add_query_arg($new_params, $video_src);
+
+  $video = str_replace($video_src, $new_src, $video);
+  $video = str_replace('></iframe>', ' class="embed-responsive-item"></iframe>', $video);
+
+  return $video;
 }

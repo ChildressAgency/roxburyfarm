@@ -87,14 +87,7 @@
                 <div class="embed-responsive embed-responsive-16by9">
                   <?php
                     $featured_video = get_field('video', $featured_video_id);
-                    preg_match('/src="(.+?)"/', $featured_video, $matches);
-                    $video_src = $matches[1];
-                    $new_params = array('rel' => 0);
-                    $new_src = add_query_arg($new_params, $video_src);
-                    $featured_video = str_replace($video_src, $new_src, $featured_video);
-                    $featured_video = str_replace('></iframe>', ' class="embed-responsive-item"></iframe>', $featured_video);
-                  
-                    echo $featured_video; 
+                    echo roxburyfarm_add_video_params($featured_video);
                   ?>
                 </div>
               </div>
