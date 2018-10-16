@@ -291,3 +291,47 @@ function roxburyfarm_footer_fallback_menu(){ ?>
     <li><a href="<?php echo home_url('contact'); ?>">Contact Us</a></li>
   </ul>
 <?php }
+
+add_action('init', 'roxburyfarm_create_post_types');
+function roxburyfarm_create_post_types(){
+  $videos_labels = array(
+    'name' => 'Videos',
+    'singular_name' => 'Video',
+    'menu_name' => 'Videos',
+    'add_new_item' => 'Add New Video',
+    'search_items' => 'Search Videos',
+    'edit_item' => 'Edit Video',
+    'view_item' => 'View Video',
+    'all_items' => 'All Videos',
+    'new_item' => 'New Video',
+    'not_found' => 'No Videos Found'
+  );
+  $videos_args = array(
+    'labels' => $videos_labels,
+    'capability_type' => 'post',
+    'public' => true,
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-format-video',
+    'query_var' => 'videos',
+    'has_archive' => true,
+    'supports' => array(
+      'title',
+      'custom-fields',
+      'revisions'
+    )
+  );
+  register_post_type('videos', $videos_args);
+
+  register_taxonomy('video_type',
+    'videos',
+    array(
+      'hierarchical' => true,
+      'show_admin_column' => true,
+      'public' => true,
+      'labels' => array(
+        'name' => 'Video Types',
+        'singular_name' => 'Video Type'
+      )
+    )
+      );
+}
