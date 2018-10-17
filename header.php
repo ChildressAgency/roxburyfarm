@@ -113,7 +113,7 @@
       <div class="hero-caption">
         <?php if(get_field('hero_title')): ?>
           <h1><?php the_field('hero_title'); ?></h1>
-        <?php elseif(is_home() || is_single()): ?>
+        <?php elseif(is_home() || is_singular('post')): ?>
           <h1>Tips</h1>
         <?php elseif(is_page('videos')): ?>
           <h1>Videos</h1>

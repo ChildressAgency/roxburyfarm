@@ -63,7 +63,7 @@
                           'menu_id' => '',
                           'echo' => true,
                           'fallback_cb' => 'roxburyfarm_footer_fallback_menu',
-                          'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>';
+                          'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                           'depth' => 1,
                           'walker' => new wp_bootstrap_navwalker()
                         );

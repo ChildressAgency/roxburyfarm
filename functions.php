@@ -276,7 +276,7 @@ function roxburyfarm_header_fallback_menu(){ ?>
   <ul class="nav navbar-nav navbar-right">
     <li <?php if(is_page('products') || is_singular('products')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('products'); ?>">Products</a></li>
     <li <?php if(is_page('videos')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('videos'); ?>">Videos</a></li>
-    <li <?php if(is_home() || is_single()){ echo ' class="active"'; } ?>><a href="<?php echo home_url('tips'); ?>">Tips</a></li>
+    <li <?php if(is_home() || is_singular('post')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('tips'); ?>">Tips</a></li>
     <li <?php if(is_page('about')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('about'); ?>">About</a></li>
     <li <?php if(is_page('contact')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('contact'); ?>">Contact</a></li>
   </ul>

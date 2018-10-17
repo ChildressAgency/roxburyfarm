@@ -105,7 +105,6 @@
           <div class="col-sm-6">
             <h2><?php the_field('social_feed_section_title'); ?></h2>
             <?php the_field('social_feed_section_content'); ?>
-            <?php echo do_shortcode('[custom-facebook-feed]'); ?>
           </div>
         </div>
       </div>

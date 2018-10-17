@@ -59,9 +59,9 @@
               </div>
             <?php $t++; endwhile; ?>
           </div>
-
-        </div>
-      </section>
+        </section>
+      <?php endif; ?>
+    
       <?php if(get_field('price_disclaimer')): ?>
         <div class="products-disclaimer">
           <p><?php the_field('price_disclaimer'); ?></p>
