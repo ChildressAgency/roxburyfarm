@@ -48,22 +48,22 @@
 
     <section id="service-section">
       <div class="container">
-        <?php if(have_rows('services')): ?>
+        <?php if(have_rows('quick_links')): ?>
           <div class="row">
-            <?php while(have_rows('services')): the_row(); ?>
+            <?php while(have_rows('quick_links')): the_row(); ?>
               <div class="col-sm-6 col-md-3">
                 <div class="service-card">
-                  <?php $service_image = get_sub_field('service_image'); ?>
+                  <?php $service_image = get_sub_field('quick_link_image'); ?>
                   <img src="<?php echo $service_image['url']; ?>" class="center-block" alt="<?php echo $service_image['alt']; ?>" />
-                  <h3><?php the_sub_field('service_title'); ?></h3>
+                  <h3><?php the_sub_field('quick_link_title'); ?></h3>
                   <div class="service-card-content">
-                    <h3><?php the_sub_field('service_title'); ?></h3>
-                    <?php if(get_sub_field('service_caption')): ?>
+                    <h3><?php the_sub_field('quick_link_title'); ?></h3>
+                    <?php if(get_sub_field('quick_link_caption')): ?>
                       <div class="service-card-caption">
-                        <p><?php the_sub_field('service_caption'); ?></p>
+                        <p><?php the_sub_field('quick_link_caption'); ?></p>
                       </div>
                     <?php endif; ?>
-                    <?php $service_link = get_sub_field('service_link'); if($service_link): ?>
+                    <?php $service_link = get_sub_field('quick_link_link'); if($service_link): ?>
                       <a href="<?php echo $service_link['url']; ?>" class="btn-main btn-white service-learn-more"><?php echo $service_link['title']; ?></a>
                     <?php endif; ?>
                   </div>
@@ -105,6 +105,7 @@
           <div class="col-sm-6">
             <h2><?php the_field('social_feed_section_title'); ?></h2>
             <?php the_field('social_feed_section_content'); ?>
+            <?php echo do_shortcode('[custom-facebook-feed]'); ?>
           </div>
         </div>
       </div>

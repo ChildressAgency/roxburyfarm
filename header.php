@@ -108,13 +108,17 @@
       }
     }
   ?>
-  <div <?php if(is_front_page()){ echo 'id="hp-hero '; } ?>class="hero" style="background-image:url(<?php echo $hero_image); ?>); <?php echo $hero_image_css; ?>">
+  <div <?php if(is_front_page()){ echo 'id="hp-hero" '; } ?>class="hero" style="background-image:url(<?php echo $hero_image; ?>); <?php echo $hero_image_css; ?>">
     <div class="container">
       <div class="hero-caption">
         <?php if(get_field('hero_title')): ?>
           <h1><?php the_field('hero_title'); ?></h1>
         <?php elseif(is_home() || is_single()): ?>
           <h1>Tips</h1>
+        <?php elseif(is_page('videos')): ?>
+          <h1>Videos</h1>
+        <?php elseif(is_page('products') || is_singular('products')): ?>
+          <h1>Products</h1>
         <?php else: ?>
           <h1><?php echo get_the_title(); ?></h1>
         <?php endif; if(get_field('hero_caption')): ?>

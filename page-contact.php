@@ -12,7 +12,7 @@
         <div class="row">
           <div class="col-sm-4">
             <div id="location" class="contact-card">
-              <p><strong><?php the_field('address', 'option'); ?></strong><br /><?php the_field('city_state_zip', 'option'); ?></p>
+              <p><strong><?php the_field('street_address', 'option'); ?></strong><br /><?php the_field('city_state_zip', 'option'); ?></p>
             </div>
           </div>
           <div class="col-sm-4">

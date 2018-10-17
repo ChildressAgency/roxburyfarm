@@ -7,20 +7,19 @@
         <?php the_content(); ?>
       <?php endwhile; endif; ?>
 
-      <?php if(have_rows('table_category')): ?>
+      <?php if(have_rows('tables')): ?>
         <section id="product-tables">
           <ul class="nav nav-justified" role="tablist">
-            <?php $c=0; while(have_rows('table_category')): the_row(); ?>
+            <?php $c=0; while(have_rows('tables')): the_row(); ?>
               <li role="presentation"<?php if($c==0){ echo ' class="active"'; } ?>>
-                <a href="#<?php echo sanitize_title(get_sub_field('table_category_title')); ?>" aria-controls="<?php echo sanitize_title(get_sub_field('table_category_title')); ?>" role="tab" data-toggle="tab"><?php the_sub_field('table_category_title'); ?></a>
+                <a href="#<?php echo sanitize_title(get_sub_field('table_category')); ?>" aria-controls="<?php echo sanitize_title(get_sub_field('table_category')); ?>" role="tab" data-toggle="tab"><?php the_sub_field('table_category'); ?></a>
               </li>
             <?php $c++; endwhile; ?>
           </ul>
 
           <div class="tab-content">
-            <?php $t=0; while(have_rows('table_category')): the_row(); ?>
-              <div id="<?php echo sanitize_title(get_sub_field('table_category_title')); ?>" class="tab-pane fade<?php if($t==0){ echo ' in active'; } ?>" role="tabpanel">
-                <!-- regex to add $ to dollar values but ignore others: preg_replace('/\d+\.\d{2}/', '$$0', $str) -->
+            <?php $t=0; while(have_rows('tables')): the_row(); ?>
+              <div id="<?php echo sanitize_title(get_sub_field('table_category')); ?>" class="tab-pane fade<?php if($t==0){ echo ' in active'; } ?>" role="tabpanel">
                 <div class="responsive-table">
                   <table class="table table-condensed table-striped">
                     <?php $table_column_headers = []; ?>

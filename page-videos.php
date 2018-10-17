@@ -44,7 +44,9 @@
                     </div>
                   </div>
                 </div>
-            <?php endwhile; endif; wp_reset_postdata(); ?>
+            <?php endwhile; else: ?>
+              <p>There are currently no featured videos.</p>
+            <? endif; wp_reset_postdata(); ?>
           </div>
 
           <div id="popular" class="tab-pane fade" role="tabpanel">
@@ -74,7 +76,9 @@
                     </div>
                   </div>
                 </div>
-            <?php endwhile; endif; wp_reset_postdata(); ?>
+            <?php endwhile; else: ?>
+              <p>There are currently no videos of this type.</p>
+            <?php endif; wp_reset_postdata(); ?>
           </div>
 
           <div id="archive" class="tab-pane fade" role="tabpanel">
@@ -104,7 +108,9 @@
                     </div>
                   </div>
                 </div>
-            <?php endwhile; endif; wp_reset_postdata(); ?>
+            <?php endwhile; else: ?>
+              <p>There are currently no archived videos.</p>
+            <?php endif; wp_reset_postdata(); ?>
           </div>
         </div>
       </section>
