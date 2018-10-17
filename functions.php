@@ -321,6 +321,35 @@ function roxburyfarm_create_post_types(){
     )
   );
   register_post_type('videos', $videos_args);
+
+  $products_labels = array(
+    'name' => 'Products',
+    'singular_name' => 'Product',
+    'menu_name' => 'Products',
+    'add_new_item' => 'Add Product',
+    'search_items' => 'Search Products',
+    'edit_item' => 'Edit Products',
+    'view_item' => 'View Product',
+    'all_items' => 'All Products',
+    'new_item' => 'New Product',
+    'not_found' => 'No Products Found'
+  );
+  $products_args = array(
+    'labels' => $products_labels,
+    'capability_type' => 'post',
+    'public' => true,
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-carrot',
+    'query_var' => 'products',
+    'has_archive' => false,
+    'supports' => array(
+      'title',
+      'editor',
+      'custom-fields',
+      'revisions'
+    )
+  );
+  register_post_type('products', $products_args);
 }
 
 function roxburyfarm_add_video_params($video){
