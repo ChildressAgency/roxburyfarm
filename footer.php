@@ -1,5 +1,6 @@
   <footer id="footer">
     <div id="footer-upper" class="" alt="" />
+      <?php $slide_count = count(get_field('testimonials', 'option')); ?>
       <?php if(have_rows('testimonials', 'option')): ?>
         <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
@@ -13,14 +14,16 @@
             <?php $t++; endwhile; ?>
           </div>
 
-          <a href="#testimonial-carousel" class="left carousel-control" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a href="#testimonial-carousel" class="right carousel-control" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <?php if($slide_count > 1): ?>
+            <a href="#testimonial-carousel" class="left carousel-control" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a href="#testimonial-carousel" class="right carousel-control" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          <?php endif; ?>
         </div>
       <?php endif; ?>
 
@@ -74,7 +77,7 @@
                       <p><?php the_field('street_address', 'option'); ?><br /><?php the_field('city_state_zip', 'option'); ?><br />Main Store: <?php the_field('store_number', 'option'); ?><br />Nursery & Greenhouse: <?php the_field('nursey_phone', 'option'); ?></p>
                     </div>
                     <div class="col-sm-4 hours">
-                      <?php the_field('hours', 'option'); ?><br />Thanks for shopping with us!</p>
+                      <p><?php the_field('hours', 'option'); ?><br />Thanks for shopping with us!</p>
                     </div>
                   </div>
                   <p class="copyright">Copyright &copy;<?php echo date('Y'); ?> &bull; Website created by <a href="https://childressagency.com" target="_blank">Childress Agency</a></p>

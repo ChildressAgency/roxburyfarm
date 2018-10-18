@@ -9,7 +9,8 @@ jQuery(document).ready(function($){
 });
 
 /*
- Normalize Carousel Heights - pass in Bootstrap Carousel items. https://coderwall.com/p/uf2pka/normalize-twitter-bootstrap-carousel-slide-heights
+ Normalize Carousel Heights - pass in Bootstrap Carousel items. 
+ https://coderwall.com/p/uf2pka/normalize-twitter-bootstrap-carousel-slide-heights
 */
 $.fn.carouselHeights = function () {
   var items = $(this), //grab all slides

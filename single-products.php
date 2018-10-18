@@ -41,11 +41,11 @@
                             <th scope="row"><?php the_sub_field('row_title'); ?></th>
                             <?php
                               $column_count = count($table_column_headers);
-                              $row_fields = get_field('row_fields');
+                              $row_fields = get_sub_field('row_fields');
 
                               if(!empty($row_fields)){
                                 for($f = 0; $f < $column_count - 1; $f++){
-                                  $row_value = $row_fields[$f]['row_field'] ? $row_fields[$f]['row_field'] : '&nbsp;';
+                                  $row_value = !empty($row_fields[$f]['row_field']) ? $row_fields[$f]['row_field'] : '&nbsp;';
                                   echo '<td>' . preg_replace('/\d+\.\d{2}/', '$$0', $row_value) . '</td>';
                                 }
                               }

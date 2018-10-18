@@ -313,7 +313,6 @@ function roxburyfarm_create_post_types(){
     'menu_position' => 5,
     'menu_icon' => 'dashicons-format-video',
     'query_var' => 'videos',
-    'has_archive' => true,
     'supports' => array(
       'title',
       'custom-fields',
