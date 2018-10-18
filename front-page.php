@@ -29,7 +29,7 @@
                         <div class="caption">
                           <?php echo $slide['slide_caption']; ?>
                           <?php if($slide['slide_link']): ?>
-                            <a href="<?php echo $slide['slide_link']['url']; ?>" class="btn-main read-more" target="<?php echo $slide['slide_link']['target']; ?>"><?php echo $slide['slide_link']['title']; ?></a>
+                            <a href="<?php echo $slide['slide_link']['url']; ?>" class="btn-main read-more" target="<?php echo $slide['slide_link']['target']; ?>"><?php echo $slide['slide_link']['title'] ? $slide['slide_link']['title'] : 'Learn More'; ?></a>
                           <?php endif; ?>
                         </div>
                       <?php endif; ?>
@@ -64,7 +64,7 @@
                       </div>
                     <?php endif; ?>
                     <?php $service_link = get_sub_field('quick_link_link'); if($service_link): ?>
-                      <a href="<?php echo $service_link['url']; ?>" class="btn-main btn-white service-learn-more"><?php echo $service_link['title']; ?></a>
+                      <a href="<?php echo $service_link['url']; ?>" class="btn-main btn-white service-learn-more"><?php echo $service_link['title'] ? $service_link['title'] : 'Learn More'; ?></a>
                     <?php endif; ?>
                   </div>
                   <div class="service-card-overlay"></div>
