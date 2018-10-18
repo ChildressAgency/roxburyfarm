@@ -2,7 +2,7 @@
   <main id="main">
     <div class="container">
       <header class="page-header">
-        <h2 class="page-title">Fresh cut tips and blog</h2>
+        <h2 class="page-title">Fresh cut tips and blog:</h2>
       </header>
 
       <?php if(have_posts()): while(have_posts()): the_post(); ?>
